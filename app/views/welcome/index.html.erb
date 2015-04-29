@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+	<p>Bienvenido <%= current_user.email %></p>
+	<%= link_to ('sign_out') ,destroy_user_session_path, method: :delete %>
+<%else%>
+	<%=link_to "Register", new_user_registration_path %>
+	<p>Si ya tienes una cuenta: <%=link_to "Logueate", new_user_session_path%></p>
+<%end%>

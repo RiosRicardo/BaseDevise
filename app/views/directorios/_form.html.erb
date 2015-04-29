@@ -1,0 +1,73 @@
+<%= form_for(@directorio) do |f| %>
+  <% if @directorio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@directorio.errors.count, "error") %> prohibited this directorio from being saved:</h2>
+
+      <ul>
+      <% @directorio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre, autofocus: true, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_field :descripcion, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :area %><br>
+    <%= f.number_field :area, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.number_field :telefono, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :celular %><br>
+    <%= f.number_field :celular, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :comuna %><br>
+    <%= f.text_field :comuna, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :ciudad %><br>
+    <%= f.text_field :ciudad, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :region %><br>
+    <%= f.text_field :region, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :categoria %><br>
+    <%= f.text_field :categoria, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :subcategoria %><br>
+    <%= f.text_field :subcategoria, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :estado %><br>
+    <%= f.text_field :estado, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :ruta %><br>
+    <%= f.text_field :ruta, autocomplete: "off" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
